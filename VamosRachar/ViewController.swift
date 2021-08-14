@@ -37,15 +37,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ttsPressed(_ sender: Any) {
         //ttsSpeech recebe o texto da label de resultado e o fala
         let ttsSpeech = AVSpeechUtterance(string: labelResult.text!)
-        
+            //O idioma é definido pelo valor atual de idiomaStr
             ttsSpeech.voice = AVSpeechSynthesisVoice(language: idiomaStr)
-        
         tts.speak(ttsSpeech)
     }
-    func setupIdioma(){
-        
-    }
+    //Função que troca o idioma
     @IBAction func mudarIdioma(_ sender: Any) {
+        //Checagem do idioma atual, e inversão dos valores relevantes entre EN e PT.
         if(idiomaStr == "en-us"){
             labelTitle.text = "Vamos Rachar!"
             btnLanguage.setTitle("EN-US", for: UIControl.State.normal)
