@@ -1,2 +1,3 @@
 # at02-pdm
-at 02 em iOS
+At 02 e 03 em iOS
+Todo o código escrito está em VamosRachar/ViewController.swift, comentado pra permitir melhor entendimento.
